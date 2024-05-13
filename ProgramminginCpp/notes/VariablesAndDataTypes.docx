@@ -1,0 +1,61 @@
+How does code run?
+    code -> compiler -> code.exe -> "Hello World" 
+        Source Code -> Compiler -> Executable File -> Output
+
+Preprocessor Directive
+    ->  Header Files
+            #include <iostream>
+
+            all preprocessor directive starts with #.
+
+            Header Files include pre-written code that's required to execute our program.
+
+            E.g., iostream, vector etc.
+
+    ->  Macros
+            Symbolic constants
+            
+            E.g., #define PI 3.14
+
+Main Function
+    ->  Starting point of execution.
+    ->  Only single main function in a program.
+
+Namespace
+    using namespace std;
+    or,
+    std::cout<<"Hello World";
+
+    ->  Standard C++ Namespace is called std.
+
+    ->  define vs declare
+
+    ->  <<endl can be used for '\n'
+
+Varibles:
+    ->  If we just declare a variable in C++ and doesn't assign any value to the variable.
+            e.g., int a;
+            
+            Then the C++ automatically assigns any GARBAGE VALUE to this variable.
+
+DataTypes in C++:
+    ->  Primitive Types:
+            i.      Integer(int)                    4 Bytes
+            ii.     Character(char)                 1 Byte
+            iii.    Boolean(bool)                   1 Byte
+            iv.     Floating Point(float)           4 Bytes
+            v.      Double Floating Point(double)   8 Bytes
+
+    ->  Non-Primitive:
+            i.      String
+            ii.     Array etc.,.
+
+    ->  Note:   1 Byte = 8 bits (where, bits = 0,1)
+
+Comments in C++:
+    ->  Same as C.
+
+Taking Input in C++:
+    int age;
+    cout<<"Enter Age";
+    cin>>age;

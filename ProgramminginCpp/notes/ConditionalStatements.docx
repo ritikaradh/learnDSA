@@ -1,0 +1,19 @@
+Conditional Statements:
+    1.      if,else
+    2.      else if
+    3.      ternary operator
+    4.      switch
+
+3.  Ternary Operator:
+        ->  variable = condition? statement1 : statement2;
+        ->  e.g.,
+                bool isAdult = (age >= 18)? true : false;
+
+4.  Switch Statement:
+        e.g., switch(day){
+            case 1: cout<<"Monday";
+                    break;
+            case 2: cout<<"Tuesday";
+                    break;
+            default: cout<<"Invalid";
+        }

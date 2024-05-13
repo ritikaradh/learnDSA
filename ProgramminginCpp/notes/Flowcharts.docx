@@ -1,0 +1,15 @@
+Flowcharts:
+    1.  Flowcharts are diagrams to represent solution of a problem.
+    2.  Components of flowcharts:
+        i.      Start/Exit
+        ii.     Input/Output
+        iii.    Process
+        iv.     Decision
+        v.      Arrows
+
+    3.  Pseudo Code:
+        ->      is condition of flowchart is checked using if and else.
+                ->      is condition(if and else) condition comes into a seperate line containing both if and else statements.
+        
+        ->      loop condition of flowchart is implemented using while.
+                ->      while condition is checked in nre w=

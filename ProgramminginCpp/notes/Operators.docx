@@ -1,0 +1,40 @@
+1.      Constants:
+            Variables that cannot be changed.
+
+            //must be initialized
+            const int n = 25;
+            const float PI = 3.14;
+
+            //not allowed
+            const int n;
+            n = 25;
+
+            ->  Difference btw Macros and Const:
+                
+                Macros:
+                    ->  defined with #
+                    ->  no space is reserved in the memory, so no need to define the datatype.
+                    ->  value is fetched at compile time.
+
+                Const:
+                    ->  defined with const keyword.
+                    ->  space is reserved in the memory, so need to define datatype.
+                    ->  value is fetched at runtime.
+
+2.      Typecasting:
+            Conversion of data from one type to another.
+
+            ->  Implicit Conversion or Type promotion done by compiler to avoid data loss.
+
+            ->  Explicit Conversion done by user.
+
+            ->  bool < char < int < float < double
+
+3.      Operators:
+            i.      Arithmetic Operators
+                        a.  Binary arithmetic operators (+, -, *, /, %)
+                        b.  Unary arithmetic operators (++, --)
+            ii.     Assignment Operators (=, +=, -=, *=, /=)
+            iii.    Relational Operators (>, >=, <, <=, ==, !=)
+            iv.     Logical Operators (&&, ||, !)
+            v.      Bitwise Operators (Detailed in Bitwise Manipulation)

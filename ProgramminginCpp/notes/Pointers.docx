@@ -1,0 +1,43 @@
+Number System:
+    1.  Binary-         0 or 1.
+    2.  Decimal-        0 to 9
+    3.  Hexadecimal-    0 to 9 and a to f.
+
+AddressOf operator:
+    ->  '&' gives the address of a variable.
+    ->  e.g., &a is equal to 7920.
+
+Pointers:
+    ->  A special variable that stores address of another variable.
+    ->  e.g.,
+            int *ptr = &a;
+            float * ptr = &b;
+            char* ptr = &c;
+            int** ptr = &ptr;
+
+Dereference Operators
+    ->  Gets the value of the variable pointed by any operator.
+    ->  '*' operator lets us directly assess and modify the value of variable.
+    ->  E.g., int a  = 10;
+              int *ptr = &a;
+
+              "*ptr" will be equal to 10.
+
+Null Pointer:
+    ->  We assign NULL value to a pointer to show that it doesn't point to any location.
+    ->  Syntax:
+            int *ptr = NULL;
+    ->  Dereferencing null ptr is not possible as it'll result in error.
+
+Passing Arguements:
+    ->  Pass by value:          When parameter is a copy of actual arguement variable in memory.
+    ->  Pass by reference (Pass by address):        When we pass the reference of arguement to the function.
+
+Reference Variables:
+    ->  Reference variable is an alternate name (alias) of already existing variable.
+    ->  int a = 5;
+    ->  int &b = a;
+
+    ->  a and b refer to the same location in memory.
+
+    

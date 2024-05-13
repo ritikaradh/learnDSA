@@ -1,0 +1,6 @@
+PATTERNS using Nested Loops:
+
+    1.      Outer Loops->   No. of Rows
+            Inner Loops->   No. of Columns
+
+    2.      Work in inner loop->    Updation  in each row.

@@ -1,0 +1,12 @@
+DATA-TYPE MODIFIERS:
+    ->  Alter the meaning of existing data types.
+    ->  long:       >= 4 bytes (more than int)
+    ->  short:      2 bytes
+    ->  signed:     signed int is same as int
+    ->  unsigned:   can only store non-negative numbers.
+    ->  long long int
+
+MSB (Most Significant Bit) 
+    ->  determines the sign of the integer.
+    ->  MSB =1 indicates negative number.
+    ->  MSB =0 indicates positive number.

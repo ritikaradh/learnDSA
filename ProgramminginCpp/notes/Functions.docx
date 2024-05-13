@@ -1,0 +1,48 @@
+1.      Function:
+        ->  Block of code which runs when it is called.
+        ->  Syntax:
+                returnType fName(){
+                    //do some work
+                    return someValue; //optional
+                }
+
+                fName();    //function call
+
+2.      Function Declaration:
+        ->  Declaration:    the function's name, return type, and parameters (if any.)
+        ->  Definition:     the body of the function.
+        ->  Example:
+                void sayHello() {           //declaration
+                    cout<<"Hello :) \n";    //definition
+                }
+        ->  Example of forward declaration:
+                void sayHello();        //function declaration
+
+                int main(){
+                    sayHello();
+                    return 0;
+                }
+
+                void sayHello(){
+                    cout<<"Hello :) \n";    //function definition
+                }
+
+3.      Function with Parameters.
+        ->  Parameters: In function declaration.
+        ->  Arguements: In function call.
+        ->  Default parameters
+
+3.      Function call in memory:
+        ->  What happens in memory?
+            ->  stack memory: static memory allocation -> compile time.
+            ->  heap memory:    dynamic memory allocation -> run time.
+        ->  Current function is at the top of the stack.
+        ->  After return of control to the main function, the arbitary function or the current function gets removed from the top of the stack.
+
+4.      Scope:
+        ->  Local vs Global scope of variables.
+
+5.      Function Overloading:
+        ->  Multiple functions with the same name but different parameters.
+
+6.      Try to increase modularity in your code!

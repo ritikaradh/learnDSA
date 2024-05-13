@@ -1,0 +1,15 @@
+Loops in C++:
+    1.  for loop
+    2.  while loop
+    3.  do-while loop:
+            do{
+                //do some work
+            }while(condition);
+            
+            ->  Work gets done atleast once.
+
+Two Important terms in respect of Break Statement
+    1.  Break : To exit from a loop.
+    2.  Continue:   To skip an iteration.
+            ->  The statements after continue gets skipped.
+                
