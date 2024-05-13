@@ -1,0 +1,32 @@
+Arrays
+    1.  Definition: Linear collection of same type of elements that are stored together in contiguous memory spaces.
+
+    2.  Creating an Array
+        ->  int marks[50];              //garbage values at the indices.
+        ->  int marks[50] = {1,2,3};    //other indices are initialized with 0 as a value.
+        ->  int marks[] = {1,2,3};  
+
+        ->  Memory is statistically allocated (at compile time)
+
+        -> cout<<sizeOf(marks)      //returns no. of bits the array in total occupies.
+
+    3.  Arrays are passed by reference
+        ->  void printArr(int arr[]){....} and,
+            void printArr(int *arr){....}
+
+            are same.
+
+        ->  Reason: C++ array name is pointer.
+
+    4.  Create a function which takes an array as one of the input and prints the elements of the array.
+        ->  Did you experienced something weird?
+        ->  It's your job find out why is it.
+
+    5.  Space and Time Complexity
+        ->  General overview
+    
+    6.  Reverse an Array
+        ->  There are two ways to reverse an Array
+            i.      with extra spaces
+            ii.     w/o exttra spaces
+
