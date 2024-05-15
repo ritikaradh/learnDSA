@@ -2,16 +2,17 @@
 using namespace std;
 
 void reverseArr(int *arr, int n){
-    int temp =0, j = n - 1;
-    for(int i = 0; i <= j; i++){
+    int temp, j = n - 1;
+    for(int i = 0; i < j; i++){
         temp = arr[i];
         arr[i] = arr[j];
         arr[j--] = temp;
+        //we can swap two numbers using in-built swap function in C++ swap(arr[i],arr[j])
     }
 }
 
 int main(){
-    int arr[] = {1,2,3,4,5,6};
+    int arr[] = {1,2,3,4,5};
     int n = sizeof(arr) / sizeof(int);
 
     reverseArr(arr, n);
