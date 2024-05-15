@@ -1,19 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int reverseArr(int *arr, int n){
-
-    int copyArr[n];
-    do{
-        for()
+void reverseArray(int *arr, int len){
+    int temp[len];
+    int j = len -1;
+    for(int i=0; i < len ; i++){
+        temp[i] = arr[j--];
     }
+
+    j=0;
+    for(int i = 0; i < len; i++){
+        arr[i] = temp[j++];
+    }
+
+    free(temp);
 }
 
 int main(){
-    int arr[] = {12,23,22,23,53,13,12};
-    int n = sizeof(arr) / sizeof(int);
-
-    reverseArr(arr, n);
-    
+    int n = 5;
+    int arr[n] ={1,2,3,4,5};
+    reverseArray(arr,n);
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
     return 0;
 }
