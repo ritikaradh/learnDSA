@@ -30,3 +30,8 @@ Arrays
             i.      with extra spaces
             ii.     w/o exttra spaces
 
+    7.  Sorting an Array
+        i.      Linear Search
+        ii.     Binary Search
+                ->  criteria:   sorted array
+
