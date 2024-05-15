@@ -35,3 +35,16 @@ Arrays
         ii.     Binary Search
                 ->  criteria:   sorted array
 
+    8.  Array Pointer
+        ->  Array pointer acts like a constant pointer.
+        ->  Pointer arithmetic:
+            i.      Increment or Decrement Operators
+                        ptr++ or ++ptr 
+                        ptr-- or --ptr
+            ii.     Addition and Subtraction of Constants
+                        ptr + 3 //ptr + 3*datatype
+                        ptr - 3 //ptr - 3*datatype
+            iii.    Addition and Subtraction of Pointers
+                        ptr1 + ptr2 //invalid operation
+                        ptr1 - ptr2 //both should be of same type
+            iv.     Comparison of two pointers (==, <, <=, >, >=)
