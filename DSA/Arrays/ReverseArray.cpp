@@ -4,11 +4,13 @@ using namespace std;
 void reverseArray(int *arr, int len){
     int temp[len];
     int j = len -1;
+    
     for(int i=0; i < len ; i++){
         temp[i] = arr[j--];
     }
 
     j=0;
+    
     for(int i = 0; i < len; i++){
         arr[i] = temp[j++];
     }
