@@ -49,15 +49,30 @@ Arrays
                         ptr1 - ptr2 //both should be of same type
             iv.     Comparison of two pointers (==, <, <=, >, >=)
 
-    9.  Print Subarrays:
-        ->  Subarray is continuous part of an array.
+    9.  Classical Questions on Arrays:
 
-        ->  Subarray vs Subsequence:
-            ->  non-continuous part of an array.
-            ->  but follows order of the array.
+        i.      Print Subarrays:
+                    ->  Subarray is continuous part of an array.
 
-        ->  Interview Tip:  
-            ->  Learn the concepts of array as approach to a problem.
-            ->  Apply the concepts and approach of array problems to string and vector problems with minor modifications.
-            
-        ->  For an array of n-elements, the no. of subarrays possible = n(n-1) / 2.
+                    ->  Subarray vs Subsequence:
+                        ->  non-continuous part of an array.
+                        ->  but follows order of the array.
+
+                    ->  Interview Tip:  
+                        ->  Learn the concepts of array as approach to a problem.
+                        ->  Apply the concepts and approach of array problems to string and vector problems with minor modifications.
+
+                    ->  For an array of n-elements, the no. of subarrays possible = n(n-1) / 2.
+
+        ii.     Max Subarray Sum:
+                    ->  Return the sum of elements of the subarray whose elements makes it to the highest sum among the other subarrays of the original array.
+                    ->  Max subarray sum of an array whose all elements are positive is the sum of the array itself.
+                    ->  Above not true for an array containing negative elements.
+                    ->  There are three ways to solve this problem: 
+                        a.  Brute-force, 
+                        b.  Slightly optimized, and 
+                        c.  Kadane's approach (best approach).
+
+                    ->  Note:   INT_MIN means -infinity and INT_MAX means +infinity.
+
+        iii.    
