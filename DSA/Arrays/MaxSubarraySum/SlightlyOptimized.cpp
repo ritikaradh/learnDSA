@@ -25,4 +25,4 @@ int main(){
     return 0;
 }
 
-//The time complexity of the code is O(n^3);
+//The time complexity of the code is O(n^2);
