@@ -48,3 +48,16 @@ Arrays
                         ptr1 + ptr2 //invalid operation
                         ptr1 - ptr2 //both should be of same type
             iv.     Comparison of two pointers (==, <, <=, >, >=)
+
+    9.  Print Subarrays:
+        ->  Subarray is continuous part of an array.
+
+        ->  Subarray vs Subsequence:
+            ->  non-continuous part of an array.
+            ->  but follows order of the array.
+
+        ->  Interview Tip:  
+            ->  Learn the concepts of array as approach to a problem.
+            ->  Apply the concepts and approach of array problems to string and vector problems with minor modifications.
+            
+        ->  For an array of n-elements, the no. of subarrays possible = n(n-1) / 2.
