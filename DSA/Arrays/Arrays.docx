@@ -75,4 +75,5 @@ Arrays
 
                     ->  Note:   INT_MIN means -infinity and INT_MAX means +infinity.
 
-        iii.    
+        iii.    Buy and Sell stocks (Leetcode Easy level)
+        iv.     Trapping rainwater (Leetcode Hard level)
