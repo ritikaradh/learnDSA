@@ -19,7 +19,7 @@ using namespace std;
     //Input: nums=[4, 5, 6, 7, 0, 1, 2], target=3
     //Output: -1
 
-void rotateArray(int *arr, int len, int pivotIndex){
+void rotateArray1(int *arr, int len, int pivotIndex){
     int temp[len];
     int j=0;
     for (int i = pivotIndex; i < len; i++){
@@ -28,6 +28,18 @@ void rotateArray(int *arr, int len, int pivotIndex){
     for(int i=0; i < pivotIndex; i++){
         temp[j++] = arr[i];
     }
+    j=0;
+    for(int i=0; i < len; i++){
+        arr[i] = temp[j++];
+    }
+    free(temp);
+
+    //space complexity O(n^2);
+    //time complexity O(n).
+}
+
+void rotateArray2(int *arr, int n, int pivotIndex){
+
 }
 
 int main(){
@@ -36,7 +48,11 @@ int main(){
 
     //rotating the array before passing it through the search function
     int pivotIndex = 4;
+    rotateArray1(num, len, 4);
 
-    
+    for(int i=0; i<len; i++){
+        cout<<num[i]<<" ";
+    }
+
     return 0;
 } 
