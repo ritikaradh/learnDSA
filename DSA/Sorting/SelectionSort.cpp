@@ -27,4 +27,4 @@ int main(){
 }
 
 
-//The time complexity of the above code is
+//The time complexity of the above code is O(n^2)
