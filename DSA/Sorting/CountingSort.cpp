@@ -34,7 +34,7 @@ void countingSort(int *nums, int n){
 }
 
 int main(){
-    int arr[] = {5, 4, 3, 2, 1};
+    int arr[] = {2, 3, 4, 1, 3, 4};
     int n = sizeof(arr)/sizeof(int);
     
     countingSort(arr, n);
