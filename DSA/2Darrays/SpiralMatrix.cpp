@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void spiralMatrix(int matrix[][4], int m, int n){
+void spiralMatrix(int matrix[][4], int n, int m){
     int srow=0; int scol=0;
     int erow=n-1; int ecol=m-1;
 
@@ -18,11 +18,17 @@ void spiralMatrix(int matrix[][4], int m, int n){
 
         //bottom
         for(int j=ecol-1; j >=  scol; j--){
+            if (srow == erow){
+                break;
+            }
             cout<<matrix[erow][j]<<" ";
         }
 
         //left
         for(int i=erow-1; i >= srow+1; i--){
+            if(scol == ecol){
+                break;
+            }
             cout<<matrix[i][scol]<<" ";
         }
 
@@ -32,13 +38,13 @@ void spiralMatrix(int matrix[][4], int m, int n){
 }
 
 int main(){
-    int n=4, m=4;
+    int n=3, m=4;
 
-    int matrix[4][4] = {
+    int matrix[3][4] = {
         {1,2,3,4},
         {5,6,7,8},
         {9,10,11,12},
-        {13,14,15,16},
+
     };
 
     spiralMatrix(matrix, n, m);
