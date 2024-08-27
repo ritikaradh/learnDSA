@@ -18,12 +18,28 @@ pair<int, int> search1(int matrix[][4], int n, int m, int key){
     return {-1, -1};
 }
 
-
 // Approach 2
 // Row-wise or column-wise binary search
 // Time Complexity: O(n*logm) or O(m*logn)
-
-
+pair <int, int> search2(int matrix[][4], int n, int m, int key){
+    //column-wise bsearch
+    for(int i=0; i<n; i++){
+        int start = 0, end = m-1;
+        while(start <= end){
+            int mid = (start + end)/2;
+            if(key == matrix[i][mid]){
+                return {i, mid};
+            }
+            else if(key > matrix[i][mid]){
+                start = mid+1;
+            }
+            else{
+                end = mid-1;
+            }
+        }
+    }
+    return {-1,-1};
+}
 
 // Approach 3 
 // Staircase Approach: Staircase Search for Sorted Matrix (sorted in both row and column)
@@ -46,8 +62,6 @@ pair<int, int> search3(int matrix[][4], int n, int m, int key){
     return {-1, -1};
 }
 
-
-
 int main(){
     int n=4, m=4;
 
@@ -58,7 +72,7 @@ int main(){
         {32,33,39,50},
     };
 
-    pair<int, int> result = search1(matrix, n, m, 89);
+    pair<int, int> result = search2(matrix, n, m, 39);
     
     if(result.first != -1){
         cout<<"Key found at index "<<result.first<<", "<<result.second<<"\n";
