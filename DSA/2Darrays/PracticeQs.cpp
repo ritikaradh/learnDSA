@@ -45,7 +45,7 @@ int main(){
     };
     int n=3, m=3;
 
-    cout<<sum(nums, n, m, 1)<<"\n";
+    cout<<sum(nums, n, m, 3)<<"\n";
 
     return 0;
 }
