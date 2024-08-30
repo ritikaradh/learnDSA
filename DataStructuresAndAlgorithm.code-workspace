@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"iostream": "cpp"
+			"*.ejs": "html",
+			"iostream": "cpp",
+			"utility": "cpp"
 		}
 	}
 }
