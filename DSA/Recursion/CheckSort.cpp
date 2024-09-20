@@ -2,17 +2,31 @@
 #include <vector>
 using namespace std;
 
-bool check(vector<int> nums, int n) {
-    if (nums[n-1] > nums[n-2] || )
+bool checkSort(vector<int> nums, int i) {
+    if (i == nums.size() - 1) return true; 
+    if (nums[i] > nums[i+1]) return false; 
+    return checkSort(nums, i+1);
 }
 
 int main(){ 
-    vector<int> nums = {1,7,3,4,5};
-    int ans = check(nums, nums.size());
-    if(ans){
+    vector<int> num1 = {1,2,7,4,5};
+    vector<int> num2 = {1,2,3,4,5};
+
+    bool ans1 = checkSort(num1, 0);
+    bool ans2 = checkSort(num2, 0);
+
+    if(ans1){
         cout<<"Array is sorted"<<endl;
     }else{
-        cout<<"Not sorted"<<endl;
+        cout<<"Array not sorted"<<endl;
     }
+
+    
+    if(ans2){
+        cout<<"Array is sorted"<<endl;
+    }else{
+        cout<<"Array not sorted"<<endl;
+    }
+
     return 0;
 }
