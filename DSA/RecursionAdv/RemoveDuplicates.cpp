@@ -15,6 +15,7 @@ string rmDuplicate(string str, bool* map, string ans, int i) {
 int main(){
     bool map[26] = {false};
     cout<<rmDuplicate("apnacollege", map, "", 0)<<endl;
+    cout<<rmDuplicate("abcabcabcd", map, "", 0)<<endl;
 
     return 0;
 }
