@@ -22,12 +22,10 @@ class Node {
 };
 
 class List{
-    //head pointer
-    Node* head;
-    //tail pointer
-    Node* tail;
-
     public:
+        Node* head;
+        Node* tail;
+
         List(){
             head = NULL;
             tail = NULL;
@@ -120,10 +118,6 @@ class List{
         int searchItr(int key){
             int idx = 0;
 
-            if(head->data == key){
-                return idx;
-            }
-
             Node* temp = head;
 
             while(temp != NULL){
@@ -131,15 +125,29 @@ class List{
                     return idx;
                 }
                 idx++;
-                temp = temp->next;
+                temp =  temp->next;
             }
 
             return -1;
         }
 
-        // int searchRec(int key, int head){
+        int searchRec(int key, Node* head){
+            if(head->data == key){
+                return 0;
+            }
 
-        // }
+            if(head->next == NULL){
+                return -1;
+            }
+
+            int idx = searchRec(key, head->next);
+
+            if(idx != -1){
+                return idx+1;
+            }
+
+            return -1;
+        }
 
         //delete whole linked list
         ~List(){
@@ -168,10 +176,15 @@ int main(){
     ll.pop_back();
     ll.print();
 
+    cout<<"Searching Iteratively in Linked List"<<endl;
     cout<<ll.searchItr(2)<<endl;
     cout<<ll.searchItr(3)<<endl;
     cout<<ll.searchItr(4)<<endl;
     cout<<ll.searchItr(6)<<endl;
+
+    cout<<"Searching Recursively in Linked List"<<endl;
+    cout<<ll.searchRec(3, ll.head)<<endl;
+    cout<<ll.searchRec(9, ll.head)<<endl;
 
     return 0;
 }
