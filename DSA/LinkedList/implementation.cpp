@@ -125,9 +125,8 @@ class List{
                     return idx;
                 }
                 idx++;
-                temp =  temp->next;
+                temp = temp->next;
             }
-
             return -1;
         }
 
@@ -147,6 +146,74 @@ class List{
             }
 
             return -1;
+        }
+
+        int length(){
+            if(head == NULL){
+                return 0;
+            }
+
+            int len = 1;
+            Node* temp = head;
+            while(temp->next != NULL){
+                temp = temp->next;
+                len++;
+            }
+            
+            return len;
+        }
+
+        void remove(int n){
+            //check if ll is empty
+            if(head == NULL){
+                cout<<"Linked List is Empty"<<endl;
+                return;
+            }
+
+            int size = length();
+            
+            //check if first element of ll is supposed to be removed
+            if(size - n == 0){
+                pop_front();
+                return;
+            }
+
+            //check if the index is invalid
+            if(n > size){
+                cout<<"Invalid Index"<<endl;
+                return;
+            }
+
+            Node* prev = head;
+            cout<<size<<endl;
+
+            for(int i=0; i < size-(n+1); i++){
+                prev = prev->next;
+            }
+
+            Node* temp = prev->next;
+            prev->next = prev->next->next;
+            temp->next = NULL;
+            delete temp;
+        }
+
+        void reverse(){
+            if(head == NULL){
+                cout<<"Linked List is Empty"<<endl;
+                return;
+            }
+
+            Node* prev = NULL;
+            Node* curr = head;
+
+            while(curr != NULL){
+                Node* next = curr->next;
+                curr->next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            head = prev;
         }
 
         //delete whole linked list
@@ -176,6 +243,10 @@ int main(){
     ll.pop_back();
     ll.print();
 
+    cout<<"Reverse a Linked List without Extra Spaces"<<endl;
+    ll.reverse();
+    ll.print();
+
     cout<<"Searching Iteratively in Linked List"<<endl;
     cout<<ll.searchItr(2)<<endl;
     cout<<ll.searchItr(3)<<endl;
@@ -183,8 +254,14 @@ int main(){
     cout<<ll.searchItr(6)<<endl;
 
     cout<<"Searching Recursively in Linked List"<<endl;
+    cout<<ll.searchRec(2, ll.head)<<endl;
     cout<<ll.searchRec(3, ll.head)<<endl;
+    cout<<ll.searchRec(4, ll.head)<<endl;
     cout<<ll.searchRec(9, ll.head)<<endl;
+
+    cout<<"Find and Remove Nth Node from a Linked List"<<endl;
+    ll.remove(2);
+    ll.print();
 
     return 0;
 }
