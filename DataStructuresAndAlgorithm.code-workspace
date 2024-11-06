@@ -9,7 +9,8 @@
 			"*.ejs": "html",
 			"iostream": "cpp",
 			"utility": "cpp",
-			"ostream": "cpp"
+			"ostream": "cpp",
+			"queue": "cpp"
 		}
 	}
 }
