@@ -10,7 +10,8 @@
 			"iostream": "cpp",
 			"utility": "cpp",
 			"ostream": "cpp",
-			"queue": "cpp"
+			"queue": "cpp",
+			"vector": "cpp"
 		}
 	}
 }
