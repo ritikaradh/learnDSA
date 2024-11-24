@@ -86,7 +86,7 @@ int main() {
     root2->right->right = new Node(18);
 
     //return pairs that sums to target
-    cout<<twoSumTarget(root1, root2, 16)<<endl;
+    cout<<twoSumTarget(root1, root2, 17)<<endl;
 
 
     //return
