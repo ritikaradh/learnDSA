@@ -17,19 +17,21 @@ class Node{
     }
 };
 
-void inOrder(Node* root, int target, vector<int> &vec, int &idx){
+void inOrder(Node* root, int target, vector<int> &vec, bool isFound, int &idx){
     if(root == NULL) return;
 
-    inOrder(root->left, target, vec, idx);
+    inOrder(root->left, target, vec, isFound, idx);
 
     {
         vec.push_back(root->data);
         if(root->data < target){
             idx += 1;
+        }else if(root->data == target){
+            isFound = true;
         }
     }
 
-    inOrder(root->right, target, vec, idx);
+    inOrder(root->right, target, vec, isFound, idx);
 }
 
 int minAbsDiff(Node* root, int target){
@@ -40,21 +42,25 @@ int minAbsDiff(Node* root, int target){
     //step1: get inOrder traversal of bst and idx of target
     vector<int> vec; 
     int idx = 0;
-    inOrder(root, target, vec, idx);
+    bool isFound = false;
+    inOrder(root, target, vec, isFound, idx);
 
-    //step2: compute abs diff to the left and right of the target
+    //step2: check if target node is found
+    if(isFound) return 0;
+
+    //step3: compute abs diff to the left and right of the target
     int leftAbsDiff = INT_MAX;
     int rightAbsDiff = INT_MAX;
 
-    if(idx != 0)
-        leftAbsDiff = vec[idx] - vec[idx-1];
-        cout<<leftAbsDiff<<endl;
+    leftAbsDiff = abs(target - vec[idx]);
     if(idx != vec.size()-1)
-        rightAbsDiff = vec[idx+1] - vec[idx];
-        cout<<rightAbsDiff<<endl;
+        rightAbsDiff = abs(target - vec[idx+1]);
 
-    //step3: compare leftAbsDiff and rightAbsDiff
-    if(leftAbsDiff < rightAbsDiff) return vec[idx-1];
+    // cout<<leftAbsDiff<<endl; 
+    // cout<<rightAbsDiff<<endl;
+
+    //step4: compare leftAbsDiff and rightAbsDiff
+    if(leftAbsDiff < rightAbsDiff) return vec[idx];
     return vec[idx+1];
 }
 
@@ -69,7 +75,7 @@ int main(){
 
 
     //get min abs diff of target node
-    cout<<minAbsDiff(root, 5)<<endl;
+    cout<<minAbsDiff(root, 19)<<endl;
 
 
     //return
