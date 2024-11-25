@@ -17,7 +17,7 @@ class Node{
     }
 };
 
-void inOrder(Node* root, int target, vector<int> &vec, bool isFound, int &idx){
+void inOrder(Node* root, int target, vector<int> &vec, bool &isFound, int &idx){
     if(root == NULL) return;
 
     inOrder(root->left, target, vec, isFound, idx);
@@ -60,8 +60,7 @@ int minAbsDiff(Node* root, int target){
     // cout<<rightAbsDiff<<endl;
 
     //step4: compare leftAbsDiff and rightAbsDiff
-    if(leftAbsDiff < rightAbsDiff) return vec[idx];
-    return vec[idx+1];
+    return leftAbsDiff < rightAbsDiff ? vec[idx] : vec[idx+1];
 }
 
 int main(){
