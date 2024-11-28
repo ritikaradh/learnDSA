@@ -3,6 +3,7 @@
 #include <queue>
 using namespace std;
 
+//time complexity: O(logn)
 void heapify(int parI, vector<int> &arr, int n) {
     if(parI >= arr.size()-1){
         return;
@@ -13,11 +14,11 @@ void heapify(int parI, vector<int> &arr, int n) {
 
     int maxI = parI;
 
-    if(leftCI < arr.size() && arr[leftCI] > arr[maxI]){
+    if(leftCI < n && arr[leftCI] > arr[maxI]){
         maxI = leftCI;
     }
 
-    if(rightCI < arr.size() && arr[rightCI] > arr[maxI]){
+    if(rightCI < n && arr[rightCI] > arr[maxI]){
         maxI = rightCI;
     }
 
@@ -28,6 +29,7 @@ void heapify(int parI, vector<int> &arr, int n) {
     }
 }
 
+//time complexity: n*logn
 void heapSort(vector<int> &arr){
     int n = arr.size();
 
@@ -35,4 +37,20 @@ void heapSort(vector<int> &arr){
     for(int i = n/2; i >= 0; i--){
         heapify(i, arr, n);
     }
+
+    //step2: sorting the vector
+    for(int i = n-1; i >= 0; i--){
+        swap(arr[0], arr[i]);
+        heapify(0, arr, i);
+    }
+}
+
+
+int main(){
+    vector<int> arr = {1, 4, 2, 5, 3};
+    heapSort(arr);
+    for(int i : arr){
+        cout<<i<<" ";
+    }
+    return 0; 
 }
