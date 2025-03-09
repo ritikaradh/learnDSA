@@ -12,7 +12,6 @@ class TrieNode{
 
     //constructor
     TrieNode(){
-        unordered_map<char, TrieNode*> children;
         isEnd = false;
     }
 
