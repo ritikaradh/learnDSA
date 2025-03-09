@@ -12,18 +12,28 @@ class TrieNode{
 
     //constructor
     TrieNode(){
-        unordered_map<char, TrieNode*> children(26);
+        unordered_map<char, TrieNode*> children;
         isEnd = false;
     }
 
     //destructor
     ~TrieNode(){
-        cout<<"destructor called"<<endl;
+        cout<<"trie node destructor called"<<endl;
     }
 };
 
 class Trie{
     TrieNode* root;
+
+    void deleteTrie(TrieNode* node){
+        if(!node) return;
+
+        for(pair<char, TrieNode*> child: node->children){
+            deleteTrie(child.second);
+        }
+
+        delete node;
+    }
 
 
     public:
@@ -31,12 +41,11 @@ class Trie{
     //constructor
     Trie(){
         //initialize the topmost node
-        TrieNode* root = new TrieNode();
+        root = new TrieNode();
     }
 
     //insert
     void insert(string key){
-        int n = key.size();
         TrieNode* temp = root;
 
         for(char ch: key){
@@ -72,8 +81,8 @@ class Trie{
 
     //destructor
     ~Trie(){
-
-        cout<<"destructor called"<<endl;
+        deleteTrie(root);
+        cout<<"Trie deleted successfully"<<endl;
     }
 };
 
@@ -89,6 +98,9 @@ int main(){
 
     cout<<trie->exists("sam")<<endl;
     cout<<trie->exists("song")<<endl;
+
+
+    delete trie;
 
     return 0;
 }
