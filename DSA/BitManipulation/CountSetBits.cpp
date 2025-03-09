@@ -13,6 +13,6 @@ int countSetBits(int num){
 }
 
 int main () {
-    cout<<countSetBits(7)<<endl;
+    cout<<countSetBits(2)<<endl;
     return 0;
 }
