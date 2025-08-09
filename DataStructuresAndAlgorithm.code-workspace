@@ -11,7 +11,8 @@
 			"utility": "cpp",
 			"ostream": "cpp",
 			"queue": "cpp",
-			"vector": "cpp"
+			"vector": "cpp",
+			"list": "cpp"
 		}
 	}
 }
