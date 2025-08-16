@@ -65,7 +65,7 @@ class Graph{
             }
         }
 
-        cout<<endl<<"Depth First Search Completed!"<<endl;
+        cout<<endl<<"Breadth First Search Completed!"<<endl;
     }
 };
 
